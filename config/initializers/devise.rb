@@ -3,16 +3,12 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  
-  onfig.omniauth :facebook, ENV["Facebook_Key"], ENV["Facebook_Secret"]
-config.omniauth :google_oauth2, ENV["Google_Key"], ENV["Google_Secret"]
-config.omniauth :kakao, ENV["Kakao_Key"], :redirect_path => "/users/auth/kakao/callback"
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'ada0fa38f97e63ee9d01fe0c58f020990197bd9bcacd1f08eea8909c8a5d17ceb995a0635e1158b6afb3037de6dbb82a5422f1cbd92f4a873f5e594950436eae'
+  # config.secret_key = 'b7ad73e8d6ee20d283178ccba504caa0f34d0a9f993ade86805194faed5fc990d55608fdf9ffab1401210fdab4161ab321c4b6a99b252d95d84290c91090eaec'
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -118,7 +114,7 @@ config.omniauth :kakao, ENV["Kakao_Key"], :redirect_path => "/users/auth/kakao/c
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '088e747ed7ebe0a59ba44be974ac8e11e4fd9f98a68e33186e58fcdba4b5f8c38f758a26d0fe3b5a7932d7cb688f829df1f52c155b4bf0c16407f1b6f53cd75c'
+  # config.pepper = '64845301827997316fce939d17dc37617168bf318cae90feac80983e129196fa31d3f070ebbabb89744bb9cafe223084a16504f619cf2dbc71afd16580799bde'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false

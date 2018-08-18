@@ -11,9 +11,9 @@
 <%end%>
 
 <% @post.comments.each do |c|%>
-    <%= c.content %><br>
+    <%= c.content %>
     <%= link_to "삭제", "/news/#{@post.id}/comments/destroy/#{c.id}"%>
-    <%= link_to "수정", "/news/#{@post.id}/comments/edit/#{c.id}" %>
+    <%= link_to "수정", "/news/#{@post.id}/comments/edit/#{c.id}" %> <br>
 <%end%>
     <br>
     <br>

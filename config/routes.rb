@@ -1,22 +1,10 @@
 Rails.application.routes.draw do
   
 
-  get 'visitor/main'
-
-  get 'register/info1'
-  get 'register/info2'
-  post 'register/infoget'
-  root 'visitor#main'
-  get 'visitor/main'
-
-  devise_for :users, :controllers => { omniauth_callbacks: 'user/omniauth_callbacks', registrations: "user/registrations", sessions: 'user/sessions' }
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
-  root 'home#index'
- 
-  
+  devise_for :users
   #news
+  
+  root 'home#index'
   
   get 'news/index' => 'news#index'
   
@@ -54,7 +42,11 @@ Rails.application.routes.draw do
   
   post 'news/:post_id/comments/create' => 'news_comment#create'
   
-  get '/news/:post_id/comments/destroy/:comment_id'
+  get 'news/:post_id/comments/destroy/:comment_id' => 'news_comment#destroy'
+  
+  get 'news/:post_id/comments/edit/:comment_id' => 'news_comment#edit'
+  
+  post 'news/:post_id/comments/update/:comment_id' => 'news_comment#update'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
