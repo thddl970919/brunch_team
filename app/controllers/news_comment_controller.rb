@@ -27,7 +27,7 @@ class NewsCommentController < ApplicationController
         @comment.content = params[:content]
         @comment.save
     
-        redirect_to :back
+        redirect_to "/news/show/#{@comment.new_id}"
     end
     
 end
