@@ -1,2 +1,7 @@
-<h1>Visitor#main</h1>
-<p>Find me in app/views/visitor/main.html.erb</p>
+<div style="margin-top: 200px; margin-left: 200px">
+<% if user_signed_in? %>
+  <%= link_to('로그아웃', destroy_user_session_path, :method => :delete, :class => 'item borderless') %>
+<% else %>
+  <%= link_to('로그인', new_user_session_path, :class => 'item borderless') %>
+<% end %>
+</div>

@@ -1,16 +1,21 @@
 Rails.application.routes.draw do
   
 
+  devise_for :users, :controllers => { omniauth_callbacks: 'user/omniauth_callbacks'}
+
   get 'register/info1'
 
   get 'register/info2'
 
-  get 'visitor/main'
+  get 'register/info1'
 
-  #news
+  get 'register/info2'
   
   root 'home#index'
-  
+
+  #news
+ 
+ 
   get 'news/index' => 'news#index'
   
   get 'news/new' => 'news#new'
