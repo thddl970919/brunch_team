@@ -1,5 +1,13 @@
 <%=form_tag("/post/create", method: "post") do%>
 <%= text_field_tag "post_title", nil, placeholder:"post_title"%>
 <%=text_field_tag "post_content", nil, placeholder:"post_content" %>
+<div id="star"></div>
 <%=submit_tag "submit"%>
 <%end%>
+
+<script>
+    $('#star').raty({
+        half: true,
+        path: '/imgs'
+    });
+</script>

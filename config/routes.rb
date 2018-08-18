@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
 
-  devise_for :users
   get 'register/info1'
 
   get 'register/info2'

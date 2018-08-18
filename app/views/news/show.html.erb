@@ -1,5 +1,6 @@
 제목 : <%=@post.news_name%> <br>
 내용 : <%=@post.news_content %> <br>
+별점 : <div id="star"></div>
 <%= link_to "삭제" , "/news/destroy/#{@post.id}" %>
 <%= link_to "수정" , "/news/edit/#{@post.id}" %>
 
@@ -36,3 +37,12 @@
     </div>
   </div>
 </div>
+
+<script>
+    $('#star').raty({
+        half:true,
+        path: '/imgs',
+        score: <%= @post.rating %>,
+        readOnly: true
+        });
+</script>
