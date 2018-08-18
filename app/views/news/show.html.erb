@@ -1,0 +1,38 @@
+제목 : <%=@post.news_name%> <br>
+내용 : <%=@post.news_content %> <br>
+<%= link_to "삭제" , "/news/destroy/#{@post.id}" %>
+<%= link_to "수정" , "/news/edit/#{@post.id}" %>
+
+<hr>
+
+<%=form_tag("/news/#{@post.id}/comments/create", method: "post", remote: true) do%>
+    <%=text_field_tag "comment", nil, placeholder:"comment"%>
+    <%=submit_tag "submit"%>
+<%end%>
+
+<% @post.comments.each do |c|%>
+    <%= c.content %><br>
+    <%= link_to "삭제", "/news/#{@post.id}/comments/destroy/#{c.id}"%>
+    <%= link_to "수정", "/news/#{@post.id}/comments/edit/#{c.id}" %>
+<%end%>
+    <br>
+    <br>
+
+<div class="floating"> 
+<div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/sample-1.jpg">
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content">
+          <p>책 추천해주는 배너 넣는곳</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

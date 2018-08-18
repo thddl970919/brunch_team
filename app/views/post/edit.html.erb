@@ -1,0 +1,5 @@
+<%=form_tag("/post/update/#{@post.id}", method: "post") do%>
+<%= text_field_tag "post_title", @post.post_title , placeholder:"post_title"%>
+<%=text_field_tag "post_content", @post.post_content, placeholder:"post_content" %>
+<%=submit_tag "submit"%>
+<%end%>

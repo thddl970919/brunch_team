@@ -1,0 +1,5 @@
+<%=form_tag("/news/create", method: "post") do%>
+<%= text_field_tag "news_title", nil, placeholder:"news_title"%>
+<%=text_field_tag "news_content", nil, placeholder:"news_content" %>
+<%=submit_tag "submit"%>
+<%end%>

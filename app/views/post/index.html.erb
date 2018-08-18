@@ -1,0 +1,6 @@
+<%= link_to "리뷰 쓰기", "/post/new" %><br>
+<%@posts.each do |x|%>
+제목 : <a href='/post/show/<%=x.id%>'> <%=x.post_title%> </a> 
+<%= link_to "삭제" , "/post/destroy/#{x.id}" %>
+<%= link_to "수정" , "/post/edit/#{x.id}" %> <br>
+<% end %>
