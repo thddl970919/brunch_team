@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180818050817) do
+ActiveRecord::Schema.define(version: 20180820100233) do
 
   create_table "books", force: :cascade do |t|
     t.string   "book_title"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20180818050817) do
     t.text     "post_content"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "rating"
   end
 
   create_table "users", force: :cascade do |t|
