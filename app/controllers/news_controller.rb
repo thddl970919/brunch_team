@@ -38,4 +38,14 @@ class NewsController < ApplicationController
         redirect_to '/news/index'
     end
     
+    def like
+        @post = New.find(params[:id])
+        if current_user.voted_for? @post
+            @post.unliked_by(current_user)
+        else
+            @post.liked_by(current_user)
+        end
+        redirect_to :back
+    end
+    
 end

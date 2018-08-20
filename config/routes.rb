@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   
   get 'news/destroy/:id' => 'news#destroy'
   
+  get 'news/like/:id' => 'news#like'
+  
   
   #post
   
