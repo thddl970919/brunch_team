@@ -1,6 +1,10 @@
 <%= link_to "뉴스 쓰기", "/news/new" %><br>
 <%@posts.each do |x|%>
-제목 : <a href='/news/show/<%=x.id%>'> <%=x.news_name%> </a> 
-<%= link_to "삭제" , "/news/destroy/#{x.id}" %>
-<%= link_to "수정" , "/news/edit/#{x.id}" %> <br>
+<div class="list-group active">
+  <a href='/news/show/<%=x.id%>' class="list-group-item"><%=x.news_name%></a>
+<button><%= link_to "삭제" , "/news/destroy/#{x.id}" %></button>
+<button><%= link_to "수정" , "/news/edit/#{x.id}" %></button>
+</div>
+
 <% end %>
+
