@@ -5,7 +5,13 @@
     margin-right: -720px; 
     text-align:center; 
     width: 500px; 
+    font-family: 'Gaegu', cursive;
 }
+.book{
+    text-align:center;
+    font-family: 'Gaegu', cursive;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

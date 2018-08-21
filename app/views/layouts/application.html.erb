@@ -7,10 +7,21 @@
   <%= csrf_meta_tags %>
   <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!--한글폰트-->
+<link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+<!--영어폰트-->
+<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 </head>
 <body>
-
+ <!--navbar-->
+<ul class="nav nav-pills" style="font-family: 'Cabin Sketch', cursive;">
+  <li role="presentation"><a href="/news/index">News</a></li>
+  <li role="presentation"><a href="/post/index">Post</a></li>
+  <li role="presentation"><a href="/home/book">Book</a></li>
+  <li role="presentation"><a href="/home/index">random</a></li>
+</ul>
 <%= yield %>
 
 </body>

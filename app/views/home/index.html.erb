@@ -1,11 +1,14 @@
-<%= link_to "news", "/news/index" %>
-<%= link_to "post", "/post/index" %>
-<%= link_to "book", "#" %>
 
-<div style="margin-top: 200px; margin-left: 200px">
 <% if user_signed_in? %>
   <%= link_to('로그아웃', destroy_user_session_path, :method => :delete, :class => 'item borderless') %>
 <% else %>
   <%= link_to('로그인', new_user_session_path, :class => 'item borderless') %>
 <% end %>
-</div>
+
+<!--랜덤뽑기-->
+<form action='/home/result' method='post' data-remote="true">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <input type='submit' value='눌러보라지'> <br><br><br>
+</form>
+<div id="today_book"></div>
+<a href='/home/index'>되돌아가기</a>
