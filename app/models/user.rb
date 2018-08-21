@@ -1,4 +1,10 @@
 class User < ApplicationRecord
+  
+  acts_as_voter
+  
+  has_many :links
+  has_many :books, through: :links
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
@@ -65,4 +71,5 @@ class User < ApplicationRecord
   def email_required?
     false
   end
+  
 end

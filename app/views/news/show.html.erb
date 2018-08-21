@@ -1,6 +1,13 @@
 제목 : <%=@post.news_name%> <br>
 내용 : <%=@post.news_content %> <br>
-별점 : <div id="star"></div>
+
+<% 
+if current_user.voted_for? @post %>
+  <%= link_to "좋아요 취소", "/news/like/#{@post.id}" %>
+<% else %>
+  <%= link_to "좋아요", "/news/like/#{@post.id}" %>
+<%end%>
+<%= @post.get_likes.size %>
 <%= link_to "삭제" , "/news/destroy/#{@post.id}" %>
 <%= link_to "수정" , "/news/edit/#{@post.id}" %>
 
@@ -38,11 +45,3 @@
   </div>
 </div>
 
-<script>
-    $('#star').raty({
-        half:true,
-        path: '/imgs',
-        score: <%= @post.rating %>,
-        readOnly: true
-        });
-</script>
