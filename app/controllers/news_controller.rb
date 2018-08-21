@@ -11,6 +11,7 @@ class NewsController < ApplicationController
         @post = New.new
         @post.news_name = params[:news_title]
         @post.news_content = params[:news_content]
+        @post.image = params[:image]
         @post.save
     
     redirect_to '/news/index'

@@ -1,5 +1,7 @@
 제목 : <%=@post.news_name%> <br>
-내용 : <%=@post.news_content %> <br>
+내용 : 
+<%=image_tag @post.image.url %>
+<%=@post.news_content %> <br>
 
 <% 
 if current_user.voted_for? @post %>
