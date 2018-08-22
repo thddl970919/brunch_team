@@ -9,6 +9,16 @@ gem "omniauth-google-oauth2"
 gem 'omniauth-kakao', :git => 'git://github.com/hcn1519/omniauth-kakao'
 gem 'figaro'
 
+
+
+
+group :development do
+gem 'sunspot_solr'
+ 
+
+gem 'sunspot_rails'
+
+
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -21,7 +31,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'rails_db'
+
 
 gem 'acts_as_votable', '~> 0.11.1'
 
@@ -60,3 +70,4 @@ group :development do
   gem 'spring'
 end
 
+end

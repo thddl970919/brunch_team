@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
-
+  resources :posts do
+  collection do
+    get :search
+  end
+end
+  get 'news/search' => 'news#search'
   devise_for :users, :controllers => { omniauth_callbacks: 'user/omniauth_callbacks'}
 
   get 'register/info1'
