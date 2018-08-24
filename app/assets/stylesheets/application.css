@@ -51,6 +51,15 @@ table.type02 td {
     border-bottom: 1px solid #ccc;
 }
 
+.page-footer {
+    padding: 20px;
+    text-align: left;
+    background: #000000;
+    color: #ffffff;
+    margin-top: 20px;
+    font-size:10px;
+}
+
 /*.cam li{*/
 /*     float:left;*/
 /*}*/
