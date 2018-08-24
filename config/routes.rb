@@ -17,6 +17,8 @@ end
   get 'register/info2'
   
   root 'home#index'
+  
+  post 'home/result' => 'home#result'
 
   #news
  

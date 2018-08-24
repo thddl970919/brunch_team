@@ -9,6 +9,7 @@ gem "omniauth-google-oauth2"
 gem 'omniauth-kakao', :git => 'git://github.com/hcn1519/omniauth-kakao'
 gem 'figaro'
 gem 'jquery-slick-rails'
+gem 'rails_db'
 
 
 

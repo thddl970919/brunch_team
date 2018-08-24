@@ -4,6 +4,7 @@ class NewsCommentController < ApplicationController
         @comment = Comment.new
         @comment.content = params[:comment]
         @comment.new_id = params[:post_id]
+        @comment.user_id = current_user.id
         @comment.save
     
         redirect_to :back

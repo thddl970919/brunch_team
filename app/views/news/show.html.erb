@@ -2,7 +2,7 @@
   <div class="newsreading" style="weight:50px; height:50px;">
 제목 : <%=@post.news_name%> <br>
 내용 :<%=@post.news_content %> <br>
-<%=image_tag @post.image.url %>
+<%=image_tag @post.image.thumb.url %>
 </div>
 
 <% if current_user.voted_for? @post %>
@@ -23,6 +23,7 @@
 <%end%>
 
 <% @post.comments.each do |c|%>
+    
     <%= c.content %>
     <%= link_to "삭제", "/news/#{@post.id}/comments/destroy/#{c.id}"%>
     <%= link_to "수정", "/news/#{@post.id}/comments/edit/#{c.id}" %> <br>
