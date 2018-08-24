@@ -60,13 +60,18 @@ Rails.application.routes.draw do
   
   post 'news/:post_id/comments/update/:comment_id' => 'news_comment#update'
   
-    #random
-  get 'home/index' 
-
-  post 'home/result' => 'home#result'
-
-#book
-  get '/home/book'=> 'home#book'
+  
+  #book
+  
+  get 'home/index'
+  get 'home/book'
+  
+  get 'book/index' => 'book#index'
+  
+  get 'book/mylist/:id' => 'book#mylist'
+  
+  get 'book/check' => 'book#check'
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

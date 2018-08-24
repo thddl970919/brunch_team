@@ -16,19 +16,15 @@
 </head>
 <body>
  <!--navbar-->
-<ul class="nav nav-pills" style="font-family: 'Cabin Sketch', cursive;">
+<ul class="nav nav-pills" style="font-family: 'Cabin Sketch', cursive; font-size:20px;">
   <li role="presentation"><a href="/home/index">Home</a></li>
   <li role="presentation"><a href="/news/index">News</a></li>
   <li role="presentation"><a href="/post/index">Post</a></li>
   <li role="presentation"><a href="/home/book">Book</a></li>
   <li role="presentation"><a href="/home/index">random</a></li>
-  <li role="presentation"><a href="/home/index">random</a></li>
-  <% if user_signed_in? %>
-  <%= link_to('로그아웃', destroy_user_session_path, :method => :delete, :class => 'item borderless') %>
-<% else %>
-  <%= link_to('로그인', new_user_session_path, :class => 'item borderless') %>
-<% end %>
+  <li role="presentation"><a href="/book/check">My list</a></li>
 </ul>
+
 <%= yield %>
 
 </body>

@@ -1,0 +1,10 @@
+<%@books.each do |x|%>
+제목 : <%=x.book_title %><br>
+저자 : <%=x.book_writer %><br>
+분류 : <%= x.book_group %><br>
+줄거리 : <%= x.book_sum %><br>
+tmi : <%= x.book_tmi %>
+<br><br>
+<%= link_to "My List에 추가하기", "/book/mylist/#{x.id}" %>
+<br><br><hr>
+<% end %>

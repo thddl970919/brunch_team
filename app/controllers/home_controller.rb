@@ -4,8 +4,7 @@ def index
 end
 
 def result
-
-   
+    
     results=['그릭데이',
     '돈천동',
     '참참참',

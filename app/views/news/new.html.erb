@@ -1,5 +1,6 @@
-<%=form_tag("/news/create", method: "post") do%>
+<%=form_tag("/news/create", method: "post", multipart: true) do%>
 <%= text_field_tag "news_title", nil, placeholder:"news_title"%>
 <%=text_field_tag "news_content", nil, placeholder:"news_content" %>
+<%=file_field_tag "image", accept: 'image/*' %><br>
 <%=submit_tag "submit"%>
 <%end%>

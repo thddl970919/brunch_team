@@ -1,10 +1,8 @@
 <%= link_to "리뷰 쓰기", "/post/new" %><br>
 <%@posts.each do |x|%>
 
-<div class="list-group active">
+<div class="list-group active" style="font-family: 'Gaegu', cursive;">
   <a href='/post/show/<%=x.id%>' class="list-group-item"><%=x.post_title%> </a>
-<button><%= link_to "삭제" , "/post/destroy/#{x.id}" %></button>
-<button><%= link_to "수정" , "/post/edit/#{x.id}" %></button>
 </div>
 
 <% end %>
