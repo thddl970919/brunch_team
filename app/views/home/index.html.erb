@@ -1,4 +1,14 @@
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.mySlides {display:none;}
+</style>
+</head>
 
+<% content_for :head do %>
+  <meta name="turbolinks-cache-control" content="no-cache">
+<% end %>
 
 <% if user_signed_in? %>
   <%= link_to('로그아웃', destroy_user_session_path, :method => :delete, :class => 'item borderless') %>
@@ -20,3 +30,43 @@
 
 <div id="today_book"></div>
 <a href='/home/index'>되돌아가기</a>
+
+
+<div class="slider" style="outline: 1px solid black; width:500px; margin:50px;">
+  
+<div>
+  <div class="mySlides">1111111111</div>
+  <div class="mySlides">12222222121</div>
+  <div class="mySlides">133333331</div>
+  <div class="mySlides">444444411</div>
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  
+  if (slideIndex > x.length) {myIndex = 1} 
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+     
+  }
+  x[slideIndex-1].style.display = "block";
+
+}
+</script>
+
