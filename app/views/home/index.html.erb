@@ -6,23 +6,20 @@
 </style>
 </head>
 
-<<<<<<< HEAD
-=======
 <% content_for :head do %>
   <meta name="turbolinks-cache-control" content="no-cache">
 <% end %>
 
->>>>>>> 7d97631f978d9c6979c744e846a96bf988586646
 <% if user_signed_in? %>
   <%= link_to('로그아웃', destroy_user_session_path, :method => :delete, :class => 'item borderless') %>
 <% else %>
   <%= link_to('로그인', new_user_session_path, :class => 'item borderless') %>
 <% end %>
+</div>
 
-
-<%= form_tag book_search_path, :method => :get do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "검색", :name => nil %>
+<%= form_tag(book_index_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+  <%= submit_tag "Search" %>
 <% end %>
 
 <!--랜덤뽑기-->
