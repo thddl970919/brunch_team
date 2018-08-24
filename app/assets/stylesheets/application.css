@@ -58,6 +58,9 @@ table.type02 td {
     color: #ffffff;
     margin-top: 20px;
     font-size:10px;
+    position:relative;
+    bottom:0;
+    width:100%;
 }
 
 /*로그인*/
