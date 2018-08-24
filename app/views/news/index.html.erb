@@ -3,24 +3,25 @@
 
 <%@posts.each do |x|%>
  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
- 
-<div class="cam" style="margin-right: 15px; margin-left: 15px; font-family: 'Gaegu', cursive;">
-  <div class="col-sm-6 col-md-4" style="width: 30%; height: 30%; float: left;" >
-    <div class="thumbnail" >
-      <%=image_tag x.image.url %>
-      <div class="caption">
+
+<div class="grid-container">
+   <div class="row">
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail" style="width:100%;">
+      <%=image_tag x.image.url%>
+      <div class="caption" style="width:100%;">
         <h3><a href='/news/show/<%=x.id%>' class="list-group-item"><%=x.news_name%></a></h3>
         <p><a href="/news/destroy/<%=x.id%>" class="btn btn-default" role="button">삭제</a> 
         <a href="/news/edit/<%=x.id%>" class="btn btn-default" role="button">수정</a></p>
       </div>
+      </div>
+      </div>
     </div>
-  </div>
-</div>
+    </div>
+<!--  </div>-->
+<!--</div>-->
 
 <% end %>
 <hr>
 <button type="button" class="btn btn-default navbar-btn"><%= link_to "back", :back %></button>
-<<<<<<< HEAD
-=======
 
->>>>>>> b2d46263d99196238f0057199931d4624c4ba01a

@@ -2,7 +2,6 @@
 <br>
 <%@posts.each do |x|%>
 
-<<<<<<< HEAD
 <div class="list-group active" style="font-family: 'Gaegu'">
   <a href='/post/show/<%=x.id%>' class="list-group-item"><%=x.post_title%> </a>
 
@@ -13,18 +12,4 @@
 
 
 <button type="button" class="btn btn-default navbar-btn"><%= link_to "back", :back %></button>
-=======
-<div class="list-group active" style="font-family: 'Gaegu', cursive; width: 20%; margin-left:20%; margin-bottom:5px;">
-  <a href='/post/show/<%=x.id%>' class="list-group-item"><%=x.post_title%> </a> 
-  <%=User.find(x.user_id).name%>
-
-</div>
-<%= link_to "삭제" , "/post/destroy/#{x.id}" %>
-<%= link_to "수정" , "/post/edit/#{x.id}" %> <br></div>
-<% end %>
-
-<button type="button" class="btn btn-default navbar-btn"><%= link_to "back", :back %></button>
-
-
->>>>>>> b2d46263d99196238f0057199931d4624c4ba01a
 

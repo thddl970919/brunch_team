@@ -7,29 +7,16 @@
     </h2>
     
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: "ui large form"}) do |f| %>
-<<<<<<< HEAD
- 
-    <div class="input-group">
-  <span class="input-group-addon" style="font-family: 'Cabin Sketch', cursive; text-align:center;" id="sizing-addon2">ID</span>
-  <%= f.email_field :email, class:"form-control", placeholder:"이메일" %>
-</div>
-=======
 <div class="ui raised segment loginBox">
   
-  
-  
-     
-  
-  
-  <div class="ui field">
-    <%= f.label :email, :class => 'ui left aligned header' %>
-    <%= f.email_field :email %>
+  <div class="input-group">
+    <span class="input-group-addon" style="font-family: 'Cabin Sketch', cursive; text-align:center;" id="sizing-addon2">ID</span>
+    <%= f.email_field :email , class:"form-control",placeholder:"아이디"%>
   </div>
->>>>>>> b2d46263d99196238f0057199931d4624c4ba01a
 
  <div class="input-group">
   <span class="input-group-addon" style="font-family: 'Cabin Sketch', cursive; text-align:center;" id="sizing-addon2">PW</span>
-  <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"비밀번호" %>
+  <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"비밀번호"  %>
 </div>
 
   <% if devise_mapping.rememberable? -%>
