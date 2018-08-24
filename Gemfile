@@ -15,6 +15,7 @@ gem 'figaro'
 group :development do
 gem 'sunspot_solr'
  
+gem 'rails_db'
 
 gem 'sunspot_rails'
 

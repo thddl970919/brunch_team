@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get :search
   end
 end
-  get 'news/search' => 'news#search'
+  get 'book/search' => 'book#search'
   devise_for :users, :controllers => { omniauth_callbacks: 'user/omniauth_callbacks'}
 
   get 'register/info1'
