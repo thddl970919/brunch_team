@@ -3,6 +3,9 @@ def index
 
 end
 
+def about
+end
+
 def result
     
     results=['그릭데이',

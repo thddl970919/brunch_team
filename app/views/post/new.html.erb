@@ -1,9 +1,26 @@
 <%=form_tag("/post/create", method: "post") do%>
-<%= text_field_tag "post_title", nil, placeholder:"post_title"%>
-<%=text_field_tag "post_content", nil, placeholder:"post_content" %>
-<div id="star"></div>
-<%=submit_tag "submit"%>
+<div class="postview">
+<table class="type02">
+    <tbody>
+        <tr>
+            <th scope="row">제목</th>
+            <td><%= text_field_tag "post_title", nil, placeholder:"제목을 써주세요"%></td>
+        </tr>
+        <tr>
+            <th scope="row">내용</th>
+            <td><%= text_field_tag "post_content", nil, placeholder:"내용을 써주세요" %></td>
+        </tr>
+        <tr>
+            <th scope="row">별점</th>
+            <td><div id="star"></div></td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" class="btn btn-default navbar-btn"><%=submit_tag "submit"%></button>
+</div>
 <%end%>
+
+
 
 <script>
     $('#star').raty({

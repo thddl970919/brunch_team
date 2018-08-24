@@ -1,12 +1,25 @@
-<div class="postwriting">
-제목 : <%=@post.post_title%> <br>
-내용 : <%=@post.post_content %> <br>
-별점 : <div id="star"></div>
+<div class="postview">
+<table class="type02">
+    <tr>
+        <th scope="row">제목</th>
+        <td><%=@post.post_title%></td>
+    </tr>
+    <tr>
+        <th scope="row">내용</th>
+        <td><%=@post.post_content %></td>
+    </tr>
+    <tr>
+        <th scope="row">별점</th>
+        <td><div id="star"></div></td>
+    </tr>
+</table>
 <%= link_to "삭제" , "/post/destroy/#{@post.id}" %>
 <%= link_to "수정" , "/post/edit/#{@post.id}" %>
 </div>
+<hr>
 
-<%= link_to "back", :back %>
+<button type="button" class="btn btn-default navbar-btn"><%= link_to "back", :back %></button>
+
 
 <script>
     $('#star').raty({

@@ -1,16 +1,13 @@
-<%= link_to "리뷰 쓰기", "/post/new" %><br>
+<h1 style="text-align:center; font-family: 'Cabin Sketch', cursive; font-size:100px;"><%= link_to "REVIEW", "/post/new" %><br></h1>
+<br>
 <%@posts.each do |x|%>
-<<<<<<< HEAD
 
-<div class="list-group active" style="font-family: 'Gaegu', cursive;">
+<div class="list-group active" style="font-family: 'Gaegu', cursive; width: 20%; margin-left:20%; margin-bottom:5px;">
   <a href='/post/show/<%=x.id%>' class="list-group-item"><%=x.post_title%> </a>
-</div>
 
-<% end %>
-=======
-제목 : <a href='/post/show/<%=x.id%>'> <%=x.post_title%> </a> 
 <%= link_to "삭제" , "/post/destroy/#{x.id}" %>
-<%= link_to "수정" , "/post/edit/#{x.id}" %> <br>
+<%= link_to "수정" , "/post/edit/#{x.id}" %> <br></div>
 <% end %>
-<%= link_to "back", :back %>
->>>>>>> f9c792b22979c612c3b38127e38bcd99ccf69a15
+
+<button type="button" class="btn btn-default navbar-btn"><%= link_to "back", :back %></button>
+
