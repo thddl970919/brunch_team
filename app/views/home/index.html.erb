@@ -55,6 +55,13 @@
 </style>
 </head>
 
+<<<<<<< HEAD
+<h1 style="text-align:center; font-family: 'Cabin Sketch', cursive; font-size:100px; color:#C92F27; ">BRUNCH<br></h1>
+
+<% content_for :head do %>
+  <meta name="turbolinks-cache-control" content="no-cache">
+<% end %>
+
 
 <%= form_tag book_check_path, class:"search_", :method => :get do %>
     <%= text_field_tag :search, params[:search] %>
@@ -68,6 +75,13 @@
   <%= link_to('로그인', new_user_session_path, :class => 'item borderless') %>
 <% end %>
 </div>
+
+
+<!--검색-->
+<%= form_tag book_search_path, :method => :get do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "검색", :name => nil %>
+<% end %>
 
 <div class="row">
   <div class="leftcolumn">
@@ -99,6 +113,7 @@
   </div>
 </div>
 
+
 <!--랜덤뽑기-->
 <div class="random_book">
 <div id="random_b">
@@ -110,6 +125,19 @@
 <div id="today_book"></div>
 </div>
 
+
+
+<div class="slider" style="outline: 1px solid black; width:500px; margin:50px;">
+<div>
+  <div class="mySlides">1111111111</div>
+  <div class="mySlides">12222222121</div>
+  <div class="mySlides">133333331</div>
+  <div class="mySlides">444444411</div>
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+</div>
 
 <a href='/home/index'>되돌아가기</a>
 

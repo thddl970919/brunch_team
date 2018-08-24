@@ -17,7 +17,7 @@
      font-family: 'Gaegu', cursive;
 }
 .postview{
-    margin: 0 auto;
+    margin:auto;
     display:inline-block;
     text-align:center;
     position: relative;
@@ -60,6 +60,16 @@ table.type02 td {
     font-size:10px;
 }
 
+/*로그인*/
+.login{
+    margin-top:10%;
+    margin-right:30%;
+    margin-left:40%;
+   width:20%; 
+}
+.field{
+    font-family: 'Gaegu', cursive;
+}
 /*.cam li{*/
 /*     float:left;*/
 /*}*/
