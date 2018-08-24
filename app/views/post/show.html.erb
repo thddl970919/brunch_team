@@ -5,6 +5,10 @@
         <td><%=@post.post_title%></td>
     </tr>
     <tr>
+        <th scope="row">작성자</th>
+        <td><%= User.find(@post.user_id).name %></td>
+    </tr>
+    <tr>
         <th scope="row">내용</th>
         <td><%=@post.post_content %></td>
     </tr>

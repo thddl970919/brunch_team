@@ -6,3 +6,8 @@ class New < ActiveRecord::Base
 
 end
     
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> b2d46263d99196238f0057199931d4624c4ba01a

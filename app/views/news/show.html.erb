@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="postview">
 <table class="type02">
     <tbody>
@@ -16,6 +17,14 @@
     </tbody>
 </table>
 <button type="button" class="btn btn-default navbar-btn"><%=submit_tag "submit"%></button>
+=======
+<div class="postwriting" style="font-family: 'Gaegu', cursive;">
+  <div class="newsreading" style="weight:50px; height:50px;">
+제목 : <%=@post.news_name%> <br>
+내용 :<%=@post.news_content %> <br>
+<%=image_tag @post.image.thumb.url %>
+</div>
+>>>>>>> b2d46263d99196238f0057199931d4624c4ba01a
 
 <!--뉴스좋아요-->
 <br>
@@ -38,6 +47,8 @@
 <%end%>
 
 <% @post.comments.each do |c|%>
+    <%= User.find(c.user_id).name %>
+    
     <%= c.content %>
     <%= link_to "삭제", "/news/#{@post.id}/comments/destroy/#{c.id}"  %>
     <%= link_to "수정", "/news/#{@post.id}/comments/edit/#{c.id}" %> <br>

@@ -11,19 +11,26 @@
     <div class="ui raised segment loginBox">
       
       
- <div class="field">
-        <%= f.label :name, '이름', :class => 'ui left aligned header' %>
-        <%= f.email_field :email, autocomplete: "off" %>
+      
+        <div class="field">
+        <%= f.label :name, :class => 'ui left aligned header' %>
+        <%= f.text_field :name %>
       </div>
 
-
+      
+ 
       <div class="field">
         <%= f.label :email, :class => 'ui left aligned header' %>
         <%= f.email_field :email %>
       </div>
 
+<<<<<<< HEAD
+=======
+      
+
+>>>>>>> b2d46263d99196238f0057199931d4624c4ba01a
       <div class="field">
-        <%= f.label :name, '비밀번호', :class => 'ui left aligned header' %>
+        <%= f.label :password, '비밀번호', :class => 'ui left aligned header' %>
         <!--<% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> 자 이상이어야 합니다.)</em>
         <% end %><br />-->
@@ -31,7 +38,7 @@
       </div>
 
       <div class="field">
-        <%= f.label :name, '비밀번호 확인', :class => 'ui left aligned header' %>
+        <%= f.label :password_confirmation, '비밀번호 확인', :class => 'ui left aligned header' %>
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
 

@@ -12,6 +12,7 @@ class PostController < ApplicationController
         @post.post_title = params[:post_title]
         @post.post_content = params[:post_content]
         @post.rating = params[:score]
+        @post.user_id = current_user.id
         @post.save
     
     redirect_to '/post/index'

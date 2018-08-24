@@ -9,15 +9,11 @@ gem "omniauth-google-oauth2"
 gem 'omniauth-kakao', :git => 'git://github.com/hcn1519/omniauth-kakao'
 gem 'figaro'
 gem 'jquery-slick-rails'
+gem 'rails_db'
 
 
 
-
-group :development do
-gem 'sunspot_solr'
- 
-
-gem 'sunspot_rails'
+gem 'rails_db'
 
 
 gem 'rails', '4.2.5'
@@ -71,4 +67,3 @@ group :development do
   gem 'spring'
 end
 
-end

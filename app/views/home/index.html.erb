@@ -3,9 +3,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .mySlides {display:none;}
+
+.leftcolumn {   
+    float: left;
+    width: 75%;
+    padding:20px;
+    height: 30%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Add a card effect for articles */
+.cards {
+    background-color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.random_book {
+    padding: 20px;
+    text-align: center;
+    outline:1px solid black ;
+    border-radius: 15px 50px;
+    background: #ffffff;
+    margin-top: 20px;
+}
+
+.search_{
+  width:20%;
+  
+}
+
+.mylist{
+  outline: 1px solid black;
+  padding: 20px;
+}
 </style>
 </head>
 
+<<<<<<< HEAD
 <h1 style="text-align:center; font-family: 'Cabin Sketch', cursive; font-size:100px; color:#C92F27; ">BRUNCH<br></h1>
 
 <% content_for :head do %>
@@ -13,28 +63,73 @@
 <% end %>
 
 
+=======
+
+<%= form_tag book_check_path, class:"search_", :method => :get do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "검색", :name => nil %>
+<%end%>
+
+<div>
+>>>>>>> b2d46263d99196238f0057199931d4624c4ba01a
 <% if user_signed_in? %>
   <%= link_to('로그아웃', destroy_user_session_path, :method => :delete, :class => 'item borderless') %>
 <% else %>
   <%= link_to('로그인', new_user_session_path, :class => 'item borderless') %>
 <% end %>
+</div>
 
+<<<<<<< HEAD
 <!--검색-->
 <%= form_tag book_search_path, :method => :get do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "검색", :name => nil %>
 <% end %>
+=======
+<div class="row">
+  <div class="leftcolumn">
+    <div class="cards">
+      <div class="slider" style="outline: 1px solid black; padding:20px; height:300px">
+  
+        <div class="w3-content w3-display-container">
+          
+          <div class="mySlides">1111111111</div>
+          <div class="mySlides">12222222121</div>
+          <div class="mySlides">133333331</div>
+          <div class="mySlides">444444411</div>
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+
+  
+        </div>
+
+</div>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="cards">
+      MyList
+      <div class="mylist">
+        
+      </div>
+    </div>
+  </div>
+</div>
+>>>>>>> b2d46263d99196238f0057199931d4624c4ba01a
 
 <!--랜덤뽑기-->
+<div class="random_book">
+<div id="random_b">
 <form action='/home/result' method='post' data-remote="true">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
           <input type='submit' value='click!'> <br><br><br>
 </form>
-
+</div>
 <div id="today_book"></div>
-<a href='/home/index'>되돌아가기</a>
+</div>
 
 
+<<<<<<< HEAD
 <div class="slider" style="outline: 1px solid black; width:500px; margin:50px;">
 <div>
   <div class="mySlides">1111111111</div>
@@ -46,6 +141,12 @@
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 </div>
+=======
+<a href='/home/index'>되돌아가기</a>
+
+
+
+>>>>>>> b2d46263d99196238f0057199931d4624c4ba01a
 
 <script>
 var slideIndex = 1;
