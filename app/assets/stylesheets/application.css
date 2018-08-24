@@ -68,4 +68,6 @@ table.type02 td {
  *
  *= require_tree .
  *= require_self
+ *= require slick
+ *= require slick-theme
  */
