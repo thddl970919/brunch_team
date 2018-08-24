@@ -23,6 +23,7 @@
 <%end%>
 
 <% @post.comments.each do |c|%>
+    <%= User.find(c.user_id).name %>
     
     <%= c.content %>
     <%= link_to "삭제", "/news/#{@post.id}/comments/destroy/#{c.id}"%>
