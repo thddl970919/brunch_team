@@ -5,6 +5,12 @@
 <% else %>
   <%= link_to('로그인', new_user_session_path, :class => 'item borderless') %>
 <% end %>
+</div>
+
+<%= form_tag news_search_path, :method => :get do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "검색", :name => nil %>
+<% end %>
 
 <!--랜덤뽑기-->
 <form action='/home/result' method='post' data-remote="true">
