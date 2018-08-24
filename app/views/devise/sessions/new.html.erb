@@ -7,12 +7,20 @@
     </h2>
     
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: "ui large form"}) do |f| %>
+<<<<<<< HEAD
 <div class="ui raised segment loginBox">
   
   <div class="input-group">
     <span class="input-group-addon" style="font-family: 'Cabin Sketch', cursive; text-align:center;" id="sizing-addon2">ID</span>
     <%= f.email_field :email , class:"form-control",placeholder:"아이디"%>
   </div>
+=======
+ 
+    <div class="input-group">
+  <span class="input-group-addon" style="font-family: 'Cabin Sketch', cursive; text-align:center;" id="sizing-addon2">ID</span>
+  <%= f.email_field :email, class:"form-control", placeholder:"이메일" %>
+</div>
+>>>>>>> 366923762b3c4fbc4c93fd99057c26f0178a112a
 
  <div class="input-group">
   <span class="input-group-addon" style="font-family: 'Cabin Sketch', cursive; text-align:center;" id="sizing-addon2">PW</span>

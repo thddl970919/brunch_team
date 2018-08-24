@@ -57,6 +57,18 @@ table.type02 td {
   padding: 10px;
 }
 
+.page-footer {
+    padding: 10px;
+    text-align: left;
+    background: #000000;
+    color: #ffffff;
+    margin-top: 20px;
+    font-size:10px;
+    position:relative;
+    bottom:0;
+    width:100%;
+}
+
 /*로그인*/
 .login{
     margin-top:10%;
