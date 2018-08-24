@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :posts do
-  collection do
-    get :search
-  end
-end
-  get 'book/search' => 'book#search'
+
   devise_for :users, :controllers => { omniauth_callbacks: 'user/omniauth_callbacks'}
 
   get 'register/info1'
@@ -79,6 +74,9 @@ end
   
   get 'book/check' => 'book#check'
   
+  #about
+  
+  get 'home/about'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

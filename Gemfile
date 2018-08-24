@@ -13,13 +13,7 @@ gem 'rails_db'
 
 
 
-
-group :development do
-gem 'sunspot_solr'
- 
 gem 'rails_db'
-
-gem 'sunspot_rails'
 
 
 gem 'rails', '4.2.5'
@@ -73,4 +67,3 @@ group :development do
   gem 'spring'
 end
 
-end

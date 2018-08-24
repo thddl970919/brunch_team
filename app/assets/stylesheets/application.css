@@ -13,7 +13,47 @@
     font-size:30px;
     padding:10px;
 }
+.postwriting{
+     font-family: 'Gaegu', cursive;
+}
+.postview{
+    margin: 0 auto;
+    display:inline-block;
+    text-align:center;
+    position: relative;
+}
+table.type02 {
+    font-family: 'Gaegu', cursive;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-left: 3px solid #369;
+  margin : 20px 10px;
+}
+table.type02 th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #153d73;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+table.type02 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
 
+/*.cam li{*/
+/*     float:left;*/
+/*}*/
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

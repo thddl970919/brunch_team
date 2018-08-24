@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180824115408) do
+=======
+ActiveRecord::Schema.define(version: 20180824124704) do
+
+  create_table "add_attributes_too_users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+>>>>>>> e373b403d0c7f134665f88acb35a74cc9be120ca
 
   create_table "books", force: :cascade do |t|
     t.string   "book_title"
@@ -80,6 +89,7 @@ ActiveRecord::Schema.define(version: 20180824115408) do
     t.string   "current_sign_in_ip"
     t.datetime "last_sign_in_at"
     t.string   "last_sign_in_ip"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

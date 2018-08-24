@@ -1,14 +1,15 @@
-<%= link_to "뉴스 쓰기", "/news/new" %><br>
-<%@posts.each do |x|%>
+<h1 style="text-align:center; font-family: 'Cabin Sketch', cursive; font-size:100px;"><%= link_to "NEWS", "/news/new" %><br></h1>
 
-<div class="row" style="margin-right: -15px; margin-left: -15px; font-family: 'Gaegu', cursive;">
-  <div class="col-sm-6 col-md-4" style="width: 20%; float: left;">
-    <div class="thumbnail">
+<%@posts.each do |x|%>
+ <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+ 
+<div class="cam" style="margin-right: 15px; margin-left: 15px; font-family: 'Gaegu', cursive;">
+  <div class="col-sm-6 col-md-4" style="width: 30%; height: 30%; float: left;" >
+    <div class="thumbnail" >
       <%=image_tag x.image.url %>
       <div class="caption">
         <h3><a href='/news/show/<%=x.id%>' class="list-group-item"><%=x.news_name%></a></h3>
-        <p>...</p>
-        <p><a href="/news/destroy/<%=x.id%>" class="btn btn-primary" role="button">삭제</a> 
+        <p><a href="/news/destroy/<%=x.id%>" class="btn btn-default" role="button">삭제</a> 
         <a href="/news/edit/<%=x.id%>" class="btn btn-default" role="button">수정</a></p>
       </div>
     </div>
@@ -16,5 +17,10 @@
 </div>
 
 <% end %>
+<<<<<<< HEAD
+<hr>
+<button type="button" class="btn btn-default navbar-btn"><%= link_to "back", :back %></button>
+=======
 <%= link_to "back", :back %>
 
+>>>>>>> 7d97631f978d9c6979c744e846a96bf988586646

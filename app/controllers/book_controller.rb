@@ -1,9 +1,11 @@
 class BookController < ApplicationController
     
     def index
-        
-        @books = Book.all
-        
+        if params[:search]
+            @books = Book.search(params[:search])
+        else
+            @books = Book.all
+        end
     end
     
     def mylist
@@ -25,14 +27,6 @@ class BookController < ApplicationController
     end
     
     
-def search
-  @books = Book.search do
-    keywords params[:query]
-  end.results
+
   
-  respond_to do |format|
-    format.html { render :action => "index" }
-    format.xml  { render :xml => @posts }
-  end
-end
 end
