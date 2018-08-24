@@ -6,20 +6,20 @@
 </style>
 </head>
 
-<<<<<<< HEAD
-=======
+<h1 style="text-align:center; font-family: 'Cabin Sketch', cursive; font-size:100px; color:#C92F27; ">BRUNCH<br></h1>
+
 <% content_for :head do %>
   <meta name="turbolinks-cache-control" content="no-cache">
 <% end %>
 
->>>>>>> 7d97631f978d9c6979c744e846a96bf988586646
+
 <% if user_signed_in? %>
   <%= link_to('로그아웃', destroy_user_session_path, :method => :delete, :class => 'item borderless') %>
 <% else %>
   <%= link_to('로그인', new_user_session_path, :class => 'item borderless') %>
 <% end %>
 
-
+<!--검색-->
 <%= form_tag book_search_path, :method => :get do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "검색", :name => nil %>
@@ -36,7 +36,6 @@
 
 
 <div class="slider" style="outline: 1px solid black; width:500px; margin:50px;">
-  
 <div>
   <div class="mySlides">1111111111</div>
   <div class="mySlides">12222222121</div>
@@ -46,7 +45,6 @@
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
-
 </div>
 
 <script>

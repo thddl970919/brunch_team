@@ -1,5 +1,23 @@
 <%=form_tag("/post/update/#{@post.id}", method: "post") do%>
-<%= text_field_tag "post_title", @post.post_title , placeholder:"post_title"%>
-<%=text_field_tag "post_content", @post.post_content, placeholder:"post_content" %>
-<%=submit_tag "submit"%>
+
+<div class="postview">
+<table class="type02">
+    <tr>
+        <th scope="row">제목</th>
+        <td><%= text_field_tag "post_title", @post.post_title , placeholder:"post_title"%></td>
+    </tr>
+    <tr>
+        <th scope="row" >내용</th>
+        <td><%=text_field_tag "post_content", @post.post_content, placeholder:"post_content" %></td>
+    </tr>
+    <tr>
+        <th scope="row">별점</th>
+        <td><div id="star"></div></td>
+    </tr>
+</table>
+<%=submit_tag "완료!", class:"btn btn-default",role:"button"%>
 <%end%>
+</div>
+<hr>
+
+<button type="button" class="btn btn-default navbar-btn"><%= link_to "back", :back %></button>

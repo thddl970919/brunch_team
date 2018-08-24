@@ -13,8 +13,8 @@
         <td><div id="star"></div></td>
     </tr>
 </table>
-<%= link_to "삭제" , "/post/destroy/#{@post.id}" %>
-<%= link_to "수정" , "/post/edit/#{@post.id}" %>
+<%= link_to "삭제" , "/post/destroy/#{@post.id}", class:"btn btn-default",role:"button" %>
+<%= link_to "수정" , "/post/edit/#{@post.id}", class:"btn btn-default", role:"button" %>
 </div>
 <hr>
 

@@ -1,34 +1,39 @@
 <%= stylesheet_link_tag 'signupin', media: 'all', 'data-turbolinks-track' => true %>
 
-<div class="ui middle aligned center aligned grid loginForm">
+<div class="login">
   <div class="column loginColumn">
-    <h2 class="ui orange image header loginImage">
+    <h2 class="ui orange image header loginImage" style="font-family: 'Gaegu', cursive; text-align:center; font-size:50px;">
       로그인
     </h2>
+    
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: "ui large form"}) do |f| %>
-<div class="ui raised segment loginBox">
-  <div class="ui field">
-    <%= f.label :email, :class => 'ui left aligned header' %>
-    <%= f.email_field :email %>
-  </div>
+ 
+    <div class="input-group">
+  <span class="input-group-addon" style="font-family: 'Cabin Sketch', cursive; text-align:center;" id="sizing-addon2">ID</span>
+  <%= f.email_field :email, class:"form-control", placeholder:"이메일" %>
+</div>
 
-  <div class="ui field">
-    <%= f.label :name, '비밀번호', :class => 'ui left aligned header' %>
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+ <div class="input-group">
+  <span class="input-group-addon" style="font-family: 'Cabin Sketch', cursive; text-align:center;" id="sizing-addon2">PW</span>
+  <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"비밀번호" %>
+</div>
 
   <% if devise_mapping.rememberable? -%>
-    <div class= "ui checkbox">
+    <div class= "checkbox" style="text-align:center; font-family: 'Gaegu', cursive; ">
       <%= f.check_box :remember_me %>
-      <%= f.label :name, '기억하기' %>
+      <%= f.label :name, '←기억하기' %>
     </div>
   <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in", :class => 'ui fluid small yellow submit button' %>
+  <div class="actions" style="text-align:center;font-family: 'Gaegu', cursive; ">
+    <%= f.submit "로그인!", :class => 'btn btn-default navbar-btn' %>
   </div>
 <% end %>
   </div>
+  
     <%= render "devise/shared/links" %>
   </div>
 </div>
+
+
+
